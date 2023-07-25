@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notifications and Alerts</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
+      .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        text-align: center;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .notification {
+        display: none;
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+      }
+      .notification.show {
+        display: block;
+        animation: fadeInOut 3s ease-in-out;
+      }
+      @keyframes fadeInOut {
+        0%,
+        100% {
+          opacity: 0;
+        }
+        20%,
+        80% {
+          opacity: 1;
+        }
+      }
+      .alert {
+        display: none;
+        width: 300px;
+        margin: 20px auto;
+        padding: 10px;
+        background-color: #dc3545;
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      .alert.show {
+        display: block;
+        animation: fadeInOut 3s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Notifications and Alerts</h2>
+      <button onclick="showNotification()">Show Notification</button>
+      <button onclick="showAlert()">Show Alert</button>
+
+      <div class="notification" id="notification">
+        This is a notification message.
+      </div>
+
+      <div class="alert" id="alert">This is an alert message.</div>
+    </div>
+
+    <script>
+      function showNotification() {
+        const notification = document.getElementById("notification");
+        notification.classList.add("show");
+
+        // Hide the notification after 3 seconds
+        setTimeout(() => {
+          notification.classList.remove("show");
+        }, 3000);
+      }
+
+      function showAlert() {
+        const alertBox = document.getElementById("alert");
+        alertBox.classList.add("show");
+
+        // Hide the alert after 3 seconds
+        setTimeout(() => {
+          alertBox.classList.remove("show");
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Bank - Fund Transfer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
+      header {
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .container {
+        display: flex;
+        max-width: 1200px;
+        margin: 20px auto;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+      .menu-bar {
+        flex-basis: 200px;
+        background-color: #007bff;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+      .menu-bar h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .menu-item {
+        padding: 10px;
+        text-align: center;
+      }
+      .menu-item a {
+        color: #fff;
+        text-decoration: none;
+      }
+      .menu-item a:hover {
+        text-decoration: underline;
+      }
+      .content {
+        flex-grow: 1;
+        padding: 20px;
+      }
+      h2 {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      label {
+        font-weight: bold;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+      }
+      input[type="text"]:focus,
+      select:focus {
+        border-color: #007bff;
+      }
+      button[type="submit"] {
+        padding: 12px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      button[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+      .radio-group {
+        display: flex;
+        align-items: center;
+      }
+      .radio-group label {
+        margin-right: 10px;
+      }
+      @media (max-width: 500px) {
+        .container {
+          flex-direction: column;
+        }
+        .menu-bar {
+          flex-basis: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Online Bank</h1>
+    </header>
+
+    <div class="container">
+      <div class="menu-bar">
+        <h2>Menu</h2>
+        <div class="menu-item">
+          <a href="#">Dashboard</a>
+        </div>
+        <div class="menu-item">
+          <a href="#">Account Details</a>
+        </div>
+        <div class="menu-item">
+          <a href="#">Fund Transfer</a>
+        </div>
+        <div class="menu-item">
+          <a href="#">Profile Settings</a>
+        </div>
+      </div>
+
+      <div class="content">
+        <h2>Fund Transfer</h2>
+        <div class="form-group">
+          <label for="transferType">Select Transfer Type:</label>
+          <div class="radio-group">
+            <label>
+              <input
+                type="radio"
+                name="transferType"
+                value="withinBank"
+                checked
+              />
+              Transfer Within Bank
+            </label>
+            <label>
+              <input type="radio" name="transferType" value="toOthers" />
+              Transfer to Others
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="recipient">Recipient:</label>
+          <input type="text" id="recipient" name="recipient" required />
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount:</label>
+          <input type="text" id="amount" name="amount" required />
+        </div>
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <input type="text" id="description" name="description" />
+        </div>
+        <button type="button" onclick="enterToken()">Transfer Funds</button>
+      </div>
+    </div>
+
+    <script>
+      function enterToken() {
+        // Implement the logic to prompt the user to enter the token here
+        // For demonstration purposes, we'll show an alert
+        alert("Please enter the token to complete the fund transfer.");
+      }
+    </script>
+  </body>
+</html>

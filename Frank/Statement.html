@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Bank - Statement</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
+      header {
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        display: flex;
+      }
+      .menu-bar {
+        flex-basis: 200px;
+        background-color: #007bff;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+      .menu-bar h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .menu-item {
+        padding: 10px;
+        text-align: center;
+      }
+      .menu-item a {
+        color: #fff;
+        text-decoration: none;
+      }
+      .menu-item a:hover {
+        text-decoration: underline;
+      }
+      .content {
+        flex-grow: 1;
+        padding: 20px;
+      }
+      h2 {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+      }
+      th {
+        background-color: #f5f5f5;
+        font-weight: bold;
+      }
+      tr:hover {
+        background-color: #f9f9f9;
+      }
+      .menu-bar-logo {
+        display: block;
+        margin: 0 auto;
+        max-width: 150px;
+        padding-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Online Bank</h1>
+    </header>
+
+    <div class="container">
+      <div class="menu-bar">
+        <img
+          class="menu-bar-logo"
+          src="path/to/your/logo.png"
+          alt="Online Bank Logo"
+        />
+        <div class="menu-item">
+          <a href="#">Dashboard</a>
+        </div>
+        <div class="menu-item">
+          <a href="#">Account Details</a>
+        </div>
+        <div class="menu-item">
+          <a href="#">Fund Transfer</a>
+        </div>
+        <div class="menu-item">
+          <a href="#">Profile Settings</a>
+        </div>
+      </div>
+
+      <div class="content">
+        <h2>Statement</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Amount</th>
+              <th>Account</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2023-07-20</td>
+              <td>Grocery Shopping</td>
+              <td>-$150.00</td>
+              <td>Checking Account</td>
+            </tr>
+            <tr>
+              <td>2023-07-19</td>
+              <td>Salary Deposit</td>
+              <td>$2,000.00</td>
+              <td>Savings Account</td>
+            </tr>
+            <tr>
+              <td>2023-07-18</td>
+              <td>Phone Bill Payment</td>
+              <td>-$50.00</td>
+              <td>Checking Account</td>
+            </tr>
+            <!-- Add more transactions as needed -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
